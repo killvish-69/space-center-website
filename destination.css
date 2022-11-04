@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.outer {
+    height: 100vh;
+    width: 100vm;
+    background-image: url(assets/destination/background-destination-desktop.jpg);
+    background-size: cover;
+    padding: 2em 0 0 0;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+
+}
+
+img {
+    height: 3em;
+    width: 3em;
+    margin: 0 0 0 2em;
+}
+
+.straightline {
+    height: .05rem;
+    flex-basis: 35%;
+    background-color: aliceblue;
+    opacity: 0.3;
+    margin: 0 0 0 2em;
+    flex-shrink: 4;
+}
+
+.navbar {
+    flex-grow: 2;
+    height: 5em;
+    background-color: hsl(0, 0%, 100%, 0.1);
+    backdrop-filter: blur(1rem);
+    display:block;
+}
+
+.pages {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.list1:hover {
+    display: flex;
+    height: 90%;
+    align-items: center;
+    border-bottom: 2px solid white;
+    transform: scale(1.1);
+    transition: 300ms ease-in-out;
+}
+.bold{
+    font-weight: 800;
+}
+.lighttext{
+    opacity:0.2;
+    font-weight: 800;
+}
+.menuopen {
+    display: none;
+}
+
+.menuclose {
+    display: none;
+}
+.secondhalf{
+    display:flex;
+    width:100%;
+    height: 80vh;
+    padding:5em 5em 0 5em;
+}
+.planet{
+display:flex;
+flex-direction: column;
+width:50%;
+}
+.text1{
+font-size: 1.5em;
+}
+.planet img{
+    margin: 15em 0 0 15em;
+    transform:scale(9);
+}
+.planetinfo{
+width:50%;
+height:80%;
+display:flex;
+flex-direction: column;
+gap:1em;
+padding:2em 0 0 2em;
+margin-top: 2em;
+}
+.destinationnav{
+    height:3em;
+}
+.destinations{
+    font-size: .8em;
+    width:30em;
+    display: flex;
+    list-style-type: none;
+    justify-content:flex-start;
+    height: 100%;
+    align-items: center;
+    gap:3em;
+}
+li:hover{
+    display: flex;
+    height: 90%;
+    align-items: center;
+    border-bottom: 2px solid white;
+    transform: scale(1.1);
+    transition: 300ms ease-in-out;
+    cursor: grabbing;
+}
+.planetname{
+    font-size: 7em;
+}
+.planetdescription{
+    font-size: 0.8rem;
+    padding-right: 16em;
+}
+.distanceofplanet{
+    border-top: 1px solid hsl(0, 0%, 100%, 0.3);
+    font-size: .8rem;
+    width:67%;
+    margin-top: 1em;
+    padding-top: 1.5em;
+    color:hsl(0, 0%, 100%, 0.5);
+display:flex;
+height:8em;
+flex-direction: column;
+}
+.distanceinfo{
+display:flex;
+justify-content: space-between;
+}
+.distance{
+font-size: 2em;
+display:flex;
+justify-content: space-between;
+}
+
+@media (max-width:1179px) {
+    .outer {
+        background-image: url(assets/destination/background-destination-mobile.jpg);
+        background-size: cover;
+    }
+
+    img {
+        height: 2em;
+        width: 2em;
+    }
+    .navbar {
+        height: 100vh;
+        position: absolute;
+        right: 0;
+        top:0;
+        width: 22em;
+z-index: 999;
+    }
+    .menuopen {
+        display: block;
+        height: 1.2em;
+        width: 1.5em;
+    }
+
+    .main {
+        justify-content: space-evenly;
+    }
+    .pages{
+        flex-direction: column;
+        justify-content: flex-start;
+        height:90%;
+        gap:2em;
+        margin-left:3rem;
+    }
+    .menuclose{
+        display:block;
+        height:10%;
+        width:100%;
+    }
+    .menuclose img{
+        margin:2em 0 0 17em;
+    }
+    .list1{
+       
+        height:2em;
+        width:100%;
+    }
+    .list1:hover {
+        display: block;
+        height: 2em;;
+        align-items: center;
+        border-bottom:unset;
+        transform: unset;
+        transition: 300ms ease-in-out;
+        background-color: hsl(0, 0%, 100%, 0.1);
+        
+    }
+    .hidden{
+        display:none;
+    }
+    .secondhalf{
+        flex-direction: column;
+        padding:3em 0 0 0;
+        text-align: center;
+    }
+    .planet{
+width:100vw;
+    }
+    .text1{
+        font-size: 1em;
+    }
+    .planet img{
+        margin:10em 0 0 13em;
+    }
+    .planetinfo{
+        padding:10em 0 0 0;
+        margin:0 0 0 3em;
+        width:80vw;
+        
+        align-items: center;
+    }
+    .planetname{
+        font-size: 4em;
+    }
+    .planetdescription{
+        font-size: 0.8em;
+        padding-right:0;
+        width:25em;
+    }
+    .distanceofplanet{
+        margin-top: .5em;
+        padding-top: .5em;
+    width:25em;
+    }
+    .destinationnav{
+        height:3em;
+        width:100%;
+       
+    }
+    .destinations{
+        width:100vw;
+    gap:2em;
+    margin-left: 4em;
+    }
+}
