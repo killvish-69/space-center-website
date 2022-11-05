@@ -130,6 +130,9 @@ li:hover{
     transition: 300ms ease-in-out;
     cursor: grabbing;
 }
+li:focus{
+    border-bottom: 2px solid white;
+}
 .planetname{
     font-size: 7em;
 }
